@@ -7,10 +7,10 @@ import bodyParser from "body-parser";
  
 // import routes
 import router from "./routes/routes.js";
-  
+   
 // init express
 const app = express();
-  
+const port = +process.env.PORT || 3010
 // use express json
 app.use(express.json());
   
@@ -22,5 +22,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
   
 // use router
 app.use(router);
-  
-app.listen(8080, () => console.log('Server running at http://localhost:8080'));
+app.get('/', (req, res)=>{
+    res.json({
+        status: res.statusCode,
+        msg: "You're home"
+    })
+})
+app.listen(port, () => console.log(`Server running at http://localhost:${port}`));

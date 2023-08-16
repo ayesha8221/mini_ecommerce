@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-
+const miniURL = "http://localhost:3010/"
 export default createStore({
   state: {
     products: null,
@@ -17,12 +17,12 @@ export default createStore({
   },
   actions: {
     getProducts: async (context) => {
-      fetch("http://localhost:8080")
+      fetch(`${miniURL}/products`)
       .then((res) => res.json())
       .then((products) => context.commit("setProducts", products));
     },
     getProduct: async (context, id) => {
-      fetch("http://localhost:8080" + id)
+      fetch(`${miniURL}/products` + id)
       .then((res) => res.json())
       .then((product) => context.commit("setProduct", product))
     },  

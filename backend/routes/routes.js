@@ -2,7 +2,7 @@
 import express from "express";
   
 // import function from controller
-import { showProducts, showProductById, createProduct } from "../controllers/products.js";
+import { showProducts, showProductById,} from "../controllers/products.js";
   
 // init express router
 const router = express.Router();
@@ -14,7 +14,7 @@ router.get('/products', showProducts);
 router.get('/products/:id', showProductById);
   
 // Create New Product
-router.post('/products', createProduct);
+// router.post('/products', createProduct);
 
   
 // export default router

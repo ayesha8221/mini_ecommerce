@@ -1,8 +1,8 @@
 <template>
-    <div v-if="products" class="flex-container row row-cols-3">
-        <CardComp v-for="product of products" :key="product.id" :product="product" />
+    <div>
+        <h2>Products</h2>
     </div>
-    <div v-else>Loading...</div>
+ 
 </template>
 <script>
 import CardComp from '@/components/CardComp.vue';
@@ -21,5 +21,4 @@ export default {
 }
 </script>
 <style>
-    
 </style>
