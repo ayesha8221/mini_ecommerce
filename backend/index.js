@@ -22,10 +22,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
   
 // use router
 app.use(router);
-app.get('/', (req, res)=>{
-    res.json({
-        status: res.statusCode,
-        msg: "You're home"
-    })
-})
+// app.get('/', (req, res)=>{
+//     res.json({
+//         status: res.statusCode,
+//         msg: "You're home"
+//     })
+// })
 app.listen(port, () => console.log(`Server running at http://localhost:${port}`));

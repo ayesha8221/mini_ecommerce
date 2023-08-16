@@ -1,8 +1,8 @@
 <template>
-    <div v-if="product" class="product_details" :key="product.id" :product="product">
+    <div v-if="product" class="product_details" :key="product.productID" :product="product">
         <div class="card mx-auto">
             <div class="card text-black border-white border-2 text-center ">
-            <img :src="product.image" :alt="product.name"/>
+            <img :src="product.img" :alt="product.name"/>
             <h2 class="fs-4">
                 {{ product.name }}
             </h2>
