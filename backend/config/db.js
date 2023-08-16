@@ -1,6 +1,6 @@
-var mysql = require('mysql');
+import mysql from "mysql2";
 
-var con = mysql.createConnection({
+const con = mysql.createConnection({
   host: "bz7euxaqesnez3zdbxlo-mysql.services.clever-cloud.com",
   user: "uviblsf9ix1jtt6d",
   password: "OcXPpKaFcw4T82BSTAb9",
