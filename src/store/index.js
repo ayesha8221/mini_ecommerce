@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-const miniURL = "http://localhost:3010/"
+const miniURL = "https://e-com-api-68tp.onrender.com/"
 
 export default createStore({
   state: {
