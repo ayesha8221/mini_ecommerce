@@ -1,5 +1,5 @@
 // Import function from Product Model
-import { getProducts, getProductById, } from "../models/productModels.js";
+import { getProducts, getProductById, insertProduct} from "../models/productModels.js";
   
 // Get All Products
 export const showProducts = (req, res) => {
