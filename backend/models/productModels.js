@@ -29,7 +29,7 @@ export const getProductById = (id, result) => {
 export const insertProduct = (data, result) => {
     db.query("INSERT INTO products SET ?", [data], (err, results) => {             
         if(err) {
-            console.log(err);
+            console.log('Database error');
             result(err, null);
         } else {
             result(null, results);

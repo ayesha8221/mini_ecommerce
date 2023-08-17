@@ -26,7 +26,10 @@ export default createStore({
       fetch(`${miniURL}products/` + id)
       .then((res) => res.json())
       .then((product) => context.commit("setProduct", product))
-    },  
+    },
+    
+  
+ 
   },
   modules: {
   }
