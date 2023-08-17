@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 const miniURL = "http://localhost:3010/"
+
 export default createStore({
   state: {
     products: null,
