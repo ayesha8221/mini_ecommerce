@@ -58,27 +58,27 @@
     <h1 class="card-text">Serums</h1>
   </div> -->
  <div class="lisa">
-  <div class="card mb-3" style="width: 18rem;">
+  <div class="card col-2 " style="width: 18rem;">
   <div class="card-body">
     <h1 class="card-title">Serums</h1>
    
   </div>
 </div>
 
-  <div class="card mb-3" style="width: 18rem;">
+  <div class="card col-2  " style="width: 18rem;">
   <div class="card-body">
     <h1 class="card-title">Moisturer</h1> 
   </div>
 </div>
 
-  <div class="card mb-3" style="width: 18rem;">
+  <div class="card col-2 " style="width: 18rem;">
   <div class="card-body">
     <h1 class="card-title">Scrub</h1>
    
   </div>
 </div>
 
-  <div class="card mb-3" style="width: 18rem;">
+  <div class="card col-2 " style="width: 18rem;">
   <div class="card-body">
     <h1 class="card-title">Mask</h1>
    
