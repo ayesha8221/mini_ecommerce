@@ -4,7 +4,7 @@
  
     >
       <div class="modal-dialog">
-        <div class="modal-content">
+       
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
           
@@ -15,6 +15,7 @@
             <input
               class="input"
               v-model="name"
+              name = "name"
               type="text"
               placeholder="Product Name"
               required
@@ -22,6 +23,7 @@
             <label class="label">Price</label>
             <input
               class="input"
+              name ="price"
               v-model="price"
               type="number"
               placeholder="R"
@@ -32,6 +34,7 @@
               class="input"
               v-model="category"
               type="text"
+              name ="category"
               placeholder="Name"
               required
             />
@@ -40,6 +43,7 @@
               class="input"
               v-model="img"
               type="text"
+              name ="img"
               placeholder="http://"
               required
             />
@@ -61,7 +65,7 @@
             </button> -->
             <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
           </div>
-        </div>
+       
       </div>
     </div>
   </div>
