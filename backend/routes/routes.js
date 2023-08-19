@@ -2,6 +2,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 
+
 // import function from controller
 import { showProducts, showProductById, createProduct} from "../controllers/products.js";
   
@@ -15,7 +16,7 @@ router.get('/products', showProducts);
 router.get('/products/:id', showProductById);
   
 // Add New Product
-router.post('/products',bodyParser.json(), createProduct);
+router.post('/products', createProduct);
 
   
 // export default router
