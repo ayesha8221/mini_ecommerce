@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 
 
 // import function from controller
-import { showProducts, showProductById, createProduct} from "../controllers/products.js";
+import { showProducts, showProductById, createProduct, deleteProduct, updateProduct} from "../controllers/products.js";
   
 // init express router
 const router = express.Router();
@@ -17,6 +17,12 @@ router.get('/products/:id', showProductById);
   
 // Add New Product
 router.post('/products', createProduct);
+
+// Delete a product
+router.delete("/Products/:id", deleteProduct);
+
+// Update a product
+router.put("/Products/:id", updateProduct);
 
   
 // export default router
