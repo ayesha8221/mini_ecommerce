@@ -19,10 +19,10 @@ router.get('/products/:id', showProductById);
 router.post('/products', createProduct);
 
 // Delete a product
-router.delete("/Products/:id", deleteProduct);
+router.delete("/products/:id", deleteProduct);
 
 // Update a product
-router.put("/Products/:id", updateProduct);
+router.put("/products/:id", updateProduct);
 
   
 // export default router

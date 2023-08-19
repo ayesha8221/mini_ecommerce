@@ -40,7 +40,7 @@ export const insertProduct = (data, result) => {
 
 // Update an existing product
  export const updateProductByID = (id, data, result) => {
-    db.query('UPDATE Products SET productName = ?, image = ?, description = ?, price = ?, category = ? WHERE productID = ?', [products.name, products.img, products.category, products.price, products.productID], (err, results) => {
+    db.query('UPDATE products SET name = ?, img = ?, price = ?, category = ? WHERE productsID = ?', [products.name, products.img, products.category, products.price, products.productsID], (err, results) => {
         if (err) {
             console.log(err);
             result({ error: "Failed to update product." }, null);
@@ -53,7 +53,7 @@ export const insertProduct = (data, result) => {
 
 // Delete a product
  export const deleteProductByID = (id, result) => {
-    db.query('DELETE FROM Products WHERE productID = ?', [id], (err, results) => {
+    db.query('DELETE FROM products WHERE productsID = ?', [id], (err, results) => {
         if (err) {
             console.log(err);
             result(err, null);

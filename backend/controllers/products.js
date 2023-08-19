@@ -56,7 +56,7 @@ export const createProduct = (req, res) => {
 }
 
 // delete a product
-const deleteProduct = (req, res) => {
+export const deleteProduct = (req, res) => {
     const id = req.params.id;
     deleteProductByID(id, (err, results) => {
       if (err) {
@@ -68,7 +68,7 @@ const deleteProduct = (req, res) => {
   };
 
   // update a product
-const updateProduct = (req, res) => {
+export const updateProduct = (req, res) => {
     const id = req.params.id;
     const data = req.body;
     updateProductByID(id, data, (err, results) => {

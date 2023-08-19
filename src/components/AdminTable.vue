@@ -1,7 +1,4 @@
 <template lang="">
- 
-
-              
               <router-link to="/admin/add">Add</router-link>
           
               <div class="body" v-if="products">
@@ -42,7 +39,7 @@
                       <button
                         type="submit"
                         class="btn btton"
-                        @click="($event) => deleteProduct()"
+                        @click="deleteProduct(item.productsID)"
                         id="delete-row"
                       >
                         Delete
@@ -61,7 +58,7 @@ import router from '@/router';
 import axios from "axios"
 
 export default {
-  props: ["product"],
+  // props: ["id"],
   computed: {
         products() {
             return this.$store.state.products
@@ -71,11 +68,12 @@ export default {
     mounted() {
         this.$store.dispatch("getProducts")
     },
+
     methods: {
     async deleteProduct(id) {
       try {
         await axios.delete(`https://e-com-api-68tp.onrender.com/products/${id}`);
-        this.$store.dispatch("getProducts");
+        this.$store.dispatch("getProducts")
       } catch (err) {
         alert(err);
       }
