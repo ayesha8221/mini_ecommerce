@@ -1,16 +1,14 @@
 <template lang="">
+ 
+
+              
+              <router-link to="/admin/add">Add</router-link>
+          
               <div class="body" v-if="products">
           <div class="row table-container">
             <div class="col-12">
               <h1>Products</h1>
-              <button
-                type="button"
-                class="btn btn-success add-btn"
-                data-bs-toggle="modal"
-                data-bs-target="#addProductModal"
-              >
-                Add
-              </button>
+              
             </div>
             <div class="col">
               <table class="table is-striped is-bordered mt-2 is-fullwidth array-listsarray-lists"  @submit="deleteProduct">

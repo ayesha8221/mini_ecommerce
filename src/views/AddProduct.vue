@@ -1,11 +1,15 @@
 <template lang="">
     <div class="container">
     <div
+ 
     >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
           
           </div>
-          <div class="modal-body" @submit="addProduct">
+          <div class="modal-body">
             <h1>Add Product</h1>
             <label class="label">Product Name</label>
             <input
@@ -19,7 +23,7 @@
             <input
               class="input"
               v-model="price"
-              type="text"
+              type="number"
               placeholder="R"
               required
             />
@@ -42,21 +46,23 @@
             <button
               class="btn btn-success mt-3"
               type="submit"
-              @click=" addProduct()"
+              @click="addProduct"
             >
               Add
             </button>
           </div>
           <div class="modal-footer">
-            <button
+            <!-- <button
               type="button"
               class="btn btn-secondary"
               data-bs-dismiss="modal"
             >
               Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-         
+            </button> -->
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -76,7 +82,7 @@ export default {
     methods: {
         async addProduct(){
             try {
-                await axios.post('https://e-com-api-68tp.onrender.com/products/', {
+                await axios.post('https://e-com-api-68tp.onrender.com/products', {
                     name: this.name,
                     category: this.category,
                     price: this.price,

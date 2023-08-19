@@ -27,7 +27,7 @@ export const getProductById = (id, result) => {
   
 // Insert Product to Database
 export const insertProduct = (data, result) => {
-    db.query("INSERT INTO products SET ?", [data], (err, results) => {             
+    db.query("INSERT INTO products SET ?;", [data], (err, results) => {             
         if(err) {
             console.log('Database error');
             result(err, null);
