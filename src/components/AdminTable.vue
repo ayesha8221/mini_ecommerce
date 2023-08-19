@@ -58,7 +58,7 @@ import router from '@/router';
 import axios from "axios"
 
 export default {
-  // props: ["id"],
+  props: ["product"],
   computed: {
         products() {
             return this.$store.state.products
@@ -72,7 +72,7 @@ export default {
     methods: {
     async deleteProduct(id) {
       try {
-        await axios.delete(`https://e-com-api-68tp.onrender.com/products/${id}`);
+        await axios.delete(`https://e-com-api-68tp.onrender.com/product/${id}`);
         this.$store.dispatch("getProducts")
       } catch (err) {
         alert(err);
