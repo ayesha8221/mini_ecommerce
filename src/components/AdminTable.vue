@@ -58,10 +58,10 @@
 </template>
 <script>
 import router from '@/router';
-// import axios from "axios"
+import axios from "axios"
 
 export default {
-
+  props: ["product"],
   computed: {
         products() {
             return this.$store.state.products
@@ -71,9 +71,22 @@ export default {
     mounted() {
         this.$store.dispatch("getProducts")
     },
+    methods: {
+    async deleteProduct(id) {
+      try {
+        await axios.delete(`https://e-com-api-68tp.onrender.com/products/${id}`);
+        this.$store.dispatch("getProducts");
+      } catch (err) {
+        alert(err);
+      }
+    },
+  },
 }
 
+
+
 </script>
+
 <style lang="">
     
 </style>

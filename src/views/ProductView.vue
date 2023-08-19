@@ -17,13 +17,13 @@
 export default {
     // props: ["id"],
     computed: {
-        product() {
+        products() {
             return this.$store.state.product
         },
         id () {
             return this.$route.params.id
         }
-        
+         
     },
 
     mounted() {
