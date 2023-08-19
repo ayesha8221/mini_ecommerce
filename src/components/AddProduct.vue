@@ -56,7 +56,7 @@
             <button
               class="btn btn-success mt-3"
               type="submit"
-              @click="($event) => addProduct()"
+              @click=" addProduct"
             >
               Add
             </button>
@@ -92,7 +92,7 @@ export default {
     methods: {
         async addProduct(){
             try {
-                await axios.post('https://e-com-api-68tp.onrender.com/products', {
+                await axios.post('https://e-com-api-68tp.onrender.com/products/', {
                     name: this.name,
                     category: this.category,
                     price: this.price,

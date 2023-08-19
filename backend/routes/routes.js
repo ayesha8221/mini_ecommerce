@@ -14,7 +14,7 @@ router.get('/products', showProducts);
 router.get('/products/:id', showProductById);
   
 // Add New Product
-router.post('/admin', createProduct);
+router.post('/products', createProduct);
 
   
 // export default router
