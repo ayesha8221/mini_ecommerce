@@ -20,12 +20,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="item in products" :key="item.productsID" class="bord">
-                    <td>{{ item.productsID }}</td>
-                    <td>{{ item.name }}</td>
-                    <td>R {{ item.price }}</td>
-                    <td>{{ item.category }}</td>
-                    <td><img class="tableImg" :src="item.img" alt="" /></td>
+                  <tr v-for="product in products" :key="products.productsID" class="bord">
+                    <td>{{ product.productsID }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>R {{ product.price }}</td>
+                    <td>{{ product.category }}</td>
+                    <td><img class="tableImg" :src="product.img" alt="" /></td>
                     <td>
                       <button
                         type="button"
@@ -36,14 +36,11 @@
                       >
                         Edit
                       </button>
-                      <button
-                        type="submit"
-                        class="btn btton"
-                        @click="deleteProduct(id)"
-                        id="delete-row"
-                      >
-                        Delete
-                      </button>
+        <button class="px-5 py-1 bg-red-500 text-white rounded-sm"
+        @click="deleteProduct( product.productsID )"
+        >
+          Delete
+        </button>
                     </td>
                   </tr>
                 </tbody>

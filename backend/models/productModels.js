@@ -60,5 +60,6 @@ export const insertProduct = (data, result) => {
         } else {
             result(null, results);
         }
+        
     });
 };
