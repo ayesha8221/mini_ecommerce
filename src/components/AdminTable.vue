@@ -39,7 +39,7 @@
                       <button
                         type="submit"
                         class="btn btton"
-                        @click="deleteProduct(item.productsID)"
+                        @click="deleteProduct(products.productsID)"
                         id="delete-row"
                       >
                         Delete

@@ -6,6 +6,7 @@ import cors from "cors";
  
 // import routes
 import router from "./routes/routes.js";
+import bodyParser from "body-parser";
    
 // init express
 const app = express();
@@ -16,7 +17,7 @@ app.use(express.json());
 // use cors
 app.use(cors());
  
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
   
 // use router
 app.use(router);

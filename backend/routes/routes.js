@@ -19,7 +19,7 @@ router.get('/products/:id', showProductById);
 router.post('/products', createProduct);
 
 // Delete a product
-router.delete("/products/:id", deleteProduct);
+router.delete('/products/:id', deleteProduct);
 
 // Update a product
 router.put("/products/:id", updateProduct);
