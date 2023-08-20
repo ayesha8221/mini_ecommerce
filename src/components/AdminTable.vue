@@ -27,15 +27,11 @@
                     <td>{{ product.category }}</td>
                     <td><img class="tableImg" :src="product.img" alt="" /></td>
                     <td>
-                      <button
-                        type="button"
-                        class="btn bton"
-                        data-bs-toggle="modal"
-                        data-bs-target="#editProductModal"
-                        id="edit-row"
-                      >
-                        Edit
-                      </button>
+                      <button class="btn-edit">
+                        <router-link :to="{ name: 'admin edit', params: { id: product.productsID } }">
+            Edit
+          </router-link>
+        </button>
         <button class="px-5 py-1 bg-red-500 text-white rounded-sm"
         @click="deleteProduct( product.productsID )"
         >

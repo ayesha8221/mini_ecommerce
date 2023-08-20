@@ -17,7 +17,7 @@
 export default {
     // props: ["id"],
     computed: {
-        products() {
+        product() {
             return this.$store.state.product
         },
         id () {

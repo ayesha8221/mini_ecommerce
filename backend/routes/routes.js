@@ -2,7 +2,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 
-app.use(bodyParser.json()); 
+// app.use(bodyParser.json()); 
 
 
 // import function from controller
