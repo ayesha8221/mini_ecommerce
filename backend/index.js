@@ -16,7 +16,8 @@ app.use(express.json());
   
 // use cors
 app.use(cors());
- 
+
+app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true }));
   
 // use router

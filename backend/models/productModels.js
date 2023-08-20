@@ -40,7 +40,7 @@ export const insertProduct = (data, result) => {
 
 // Update an existing product
  export const updateProductByID = (id, data, result) => {
-    db.query('UPDATE products SET name = ?, img = ?, price = ?, category = ? WHERE productsID = ?', [products.name, products.img, products.category, products.price, products.productsID], (err, results) => {
+    db.query('UPDATE products SET name = ?, img = ?, price = ?, category = ? WHERE productsID = ?', [data.name, data.img, data.category, data.price, id], (err, results) => {
         if (err) {
             console.log(err);
             result({ error: "Failed to update product." }, null);
