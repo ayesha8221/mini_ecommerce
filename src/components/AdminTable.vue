@@ -39,7 +39,7 @@
                       <button
                         type="submit"
                         class="btn btton"
-                        @click="deleteProduct(products.productsID)"
+                        @click="deleteProduct(id)"
                         id="delete-row"
                       >
                         Delete
@@ -72,7 +72,7 @@ export default {
     methods: {
     async deleteProduct(id) {
       try {
-        await axios.delete(`https://e-com-api-68tp.onrender.com/product/${id}`);
+        await axios.delete(`https://e-com-api-68tp.onrender.com/products/${id}`);
         this.$store.dispatch("getProducts")
       } catch (err) {
         alert(err);
