@@ -2,6 +2,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 
+app.use(bodyParser.json()); 
+
 
 // import function from controller
 import { showProducts, showProductById, createProduct, deleteProduct, updateProduct} from "../controllers/products.js";
