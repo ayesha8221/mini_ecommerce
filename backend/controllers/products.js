@@ -57,7 +57,7 @@ export const createProduct = (req, res) => {
 
 // delete a product
 export const deleteProduct = (req, res) => {
-    const id = req.params.productsID;
+    const id = req.params.id;
     deleteProductByID(id, (err, results) => {
       if (err) {
         res.send(err);
